@@ -1,0 +1,90 @@
+.form-header {
+  background-color:#e53935;
+  color: white;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.submit-btn {
+  background-color:#e53935;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  color: white;
+}
+.submit-btn:hover {
+  background-color: #e53935;
+}
+.login-link {
+  text-align: center;
+  margin-top: 10px;
+  color: #1e88e5;
+}
+input::placeholder {
+  text-align: right;
+}
+
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.radio-container {
+  display: flex;
+  align-items: center;
+  /* text-align: right; */
+justify-content: end;
+  font-size: 18px;
+ 
+}
+
+.radio-container input[type="radio"] {
+  display: none;
+}
+
+.radio-container .checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid gray;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+  position: relative;
+}
+
+.radio-container input[type="radio"]:checked + .checkmark {
+  border-color: red;
+}
+
+.radio-container input[type="radio"]:checked + .checkmark::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@media(max-width: 767px){
+  .form-header{
+    width: 60% !important;
+  }
+  .row{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .r{
+    margin-bottom: 17px !important;
+  }
+  
+}

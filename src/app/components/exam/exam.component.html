@@ -1,0 +1,79 @@
+<ng-template matStepLabel>عرض الاختبار</ng-template>
+<mat-card class="mt-5 pt-5" style="border: #f44336 solid 2px ;">
+  <div class="title-container" style="background: #f44336; color: white; border-radius: 20px; ">
+    <span class="title">اختبار {{subjectName}} </span>
+  </div>
+
+
+
+  <div class="mb-4" *ngFor="let item of subjectQuestions ; let i = index">
+    <mat-card>
+      <mat-card-title class="ttle" style="color: #f44336; margin-bottom: 25px; ">سؤال : {{item.question}}
+      </mat-card-title>
+      <div>
+        <mat-radio-group aria-label="Select an option" class="d-flex justify-content-between mx-auto hero"
+          style="text-align: right; width: 80%;" dir="rtl">
+          <div class="radio-container ">
+            <div class="d-flex  mnm">
+              <mat-radio-button *ngIf="userRole=='students' && res==false && isTaken==false"
+                (change)="studentAnswerMethod(item.answer1,i)" value="answer1" class="mt-1">
+              </mat-radio-button>
+
+              <h3>A. {{item.answer1}}</h3>
+            </div>
+          </div>
+
+          <div class="radio-container ">
+            <div class="d-flex  mnm">
+              <mat-radio-button *ngIf="userRole=='students' && res==false && isTaken==false" (change)="studentAnswerMethod(item.answer2,i)"
+                value="answer2" class="mt-1">
+              </mat-radio-button>
+              <h3>B. {{item.answer2}}</h3>
+  
+            </div>
+            
+          </div>
+          <div class="radio-container ">
+            <div class="d-flex  mnm">
+              <mat-radio-button *ngIf="userRole=='students' && res==false && isTaken==false" (change)="studentAnswerMethod(item.answer3,i)"
+                value="answer3" class="mt-1">
+              </mat-radio-button>
+              <h3>C. {{item.answer3}}</h3>
+  
+            </div>
+
+          </div>
+          <div class="radio-container  ">
+            <div class="d-flex mnm">
+              <mat-radio-button *ngIf="userRole=='students' && res==false && isTaken==false" (change)="studentAnswerMethod(item.answer4,i)"
+                value="answer4" class="mt-1">
+              </mat-radio-button>
+              <h3>D. {{item.answer4}}</h3>
+  
+            </div>
+
+          </div>
+
+        </mat-radio-group>
+
+      </div>
+
+      <mat-card-title *ngIf="userRole=='doctor'" style="color: #4caf50;">الاجابة الصحيحة : {{item.correctAnswer}}
+      </mat-card-title>
+
+    </mat-card>
+    <mat-divider [inset]="true"></mat-divider>
+  </div>
+
+  <button *ngIf="userRole=='doctor'" mat-button style="background-color: #f44336; color: white; margin-right: 10px;"
+    (click)="deleteExam()">حذف
+    الاختبار </button>
+  <div class="d-flex res justify-content-center">
+    <span *ngIf="res || isTaken==true">You got <span style="font-weight: bold;">{{total}}</span> correct answers out of <span
+        style="font-weight: bold;">{{subjectQuestions.length}}</span> </span>
+    <button class="btn btn-primary help" *ngIf="userRole=='students' && res==false && isTaken==false " mat-button
+      style=" margin-right: 10px;" (click)="checkResult()">ارسال
+      الاختبار </button>
+  </div>
+
+</mat-card>

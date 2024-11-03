@@ -1,0 +1,15 @@
+.sub {
+  background: rgb(129, 61, 206);
+  padding: 35px 50px;
+  border-radius: 15px;
+  color: white;
+  font-size: x-large;
+  transition: all 0.1s ease-in-out;
+  &:hover{
+    transform: translateY(-5px);
+  }
+}
+.btn-success{
+  background: rgb(46, 158, 71);
+  color: white;
+}

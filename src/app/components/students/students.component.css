@@ -1,0 +1,33 @@
+/* Ensure the container takes up full width and applies RTL direction */
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* Allows horizontal scrolling on smaller screens */
+  direction: rtl; /* Makes the content right-to-left */
+}
+
+/* Make the mat-table take the full width of its container */
+.full-width-table {
+  width: 100%;
+}
+
+/* Align headers and cells to the right */
+.rtl-cell {
+  direction: rtl;
+  text-align: right;
+}
+ .mat-header-row{
+  background: rgba(117, 7, 219, 0.664) !important;
+}
+.mat-header-cell{
+  color: white !important;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .full-width-table th, .full-width-table td {
+    padding: 8px;
+    word-wrap: break-word; /* Ensures text wraps within cells */
+  }
+}

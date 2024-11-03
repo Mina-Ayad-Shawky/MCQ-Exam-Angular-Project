@@ -1,0 +1,18 @@
+<div class="row mt-5" dir="rtl">
+  <div class="col-md-3 col-sm-12 mb-4 text-center" *ngFor="let item of allSubjects; let i = index">
+    <div class="sub mb-2">
+      {{ item.subjectName }}
+    </div>
+    <div class="example-button-row">
+      <button *ngIf="user == 'doctor'" mat-raised-button color="warn" (click)="openDialog(i, item.id)">
+        حذف
+      </button>
+      <button *ngIf="user == 'doctor'" mat-raised-button color="primary" class="mx-2" routerLink="/exam/{{item.id}}" routerLinkActive="router-link-active" >
+        عرض
+      </button>
+      <button *ngIf="user == 'students'" mat-raised-button class="btn btn-success" routerLink="/exam/{{item.id}}">
+        ابدأ الاختبار
+      </button>
+    </div>
+  </div>
+</div>

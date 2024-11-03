@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg ">
+  <div class="container">
+    <div>
+      <a class="navbar-brand text-light" routerLink="">فاينال</a>
+      <i style="font-size: 35px;" class="fa-solid fa-graduation-cap"></i>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i style="color: white;" class="fa-solid fa-bars"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li *ngIf="users !== null"  class="nav-item active">
+          <a class="nav-link text-light" routerLink=""><span class="userName">{{users?.userName}}</span> </a>
+        </li>
+        <li *ngIf="users == null" class="nav-item active r">
+          <a class="nav-link text-light" routerLink="/register">تسجيل </a>
+        </li>
+        <li class="nav-item active r">
+          <a class="nav-link text-light" (click)="logout()" routerLink="/logIn">خروج </a>
+        </li>
+        <li *ngIf="users == null" class="nav-item active r">
+          <a class="nav-link text-light" routerLink="/logIn">دخول </a>
+        </li>
+        <li *ngIf="users !== null "  class="nav-item active r">
+          <a class="nav-link text-light" href="/sharedSubjects">المواد </a>
+        </li>
+        <li *ngIf="users !== null && users.role=='doctor'" class="nav-item active r">
+          <a class="nav-link text-light" routerLink="/students">الطلاب </a>
+        </li>
+        <li *ngIf="users !== null && users.role=='doctor'" class="nav-item active r">
+          <a class="nav-link text-light" routerLink="/subjects">اختبار جديد </a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+</nav>

@@ -1,0 +1,27 @@
+<div class="container d-flex justify-content-center align-items-center " style="margin-top: 100px;">
+  <div class="card p-4 shadow col-lg-8 col-sm-12" >
+    <div class="form-header text-center w-25 mx-auto">
+      <h6 style="margin-bottom: 0px;font-size: 20px;">Register</h6>
+    </div>
+    <form [formGroup]="myForm">
+      <div class="row mb-3 " >
+        <div class="col">
+          <input type="text" class="form-control r" placeholder="الاسم" formControlName="name">
+        </div>
+        <div class="col">
+          <input type="email" class="form-control" placeholder="الايميل" formControlName="email">
+        </div>
+      </div>
+      <div class="row mb-3 ">
+        <div class="col">
+          <input type="password" class="form-control r" placeholder="كلمة المرور" formControlName="password">
+        </div>
+        <div class="col">
+          <input type="password" class="form-control" placeholder="تأكيد كلمة المرور" formControlName="confirmPassword">
+        </div>
+      </div>
+      <button type="submit" (click)="onSubmit()" [disabled]="myForm.invalid || myForm.value.password != myForm.value.confirmPassword" class="btn submit-btn">انشاء الحساب</button>
+      <a routerLink="/logIn" class="d-block login-link">املك حساب بالفعل؟</a>
+    </form>
+  </div>
+</div>

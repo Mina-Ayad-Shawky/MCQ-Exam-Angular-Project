@@ -1,0 +1,28 @@
+.navbar{
+  background-color: #e53935;
+}
+.container{
+  flex-direction: row-reverse;
+  color: white;
+}
+.navbar-nav , .navbar-brand{
+  font-family: 'Noto Kufi Arabic', sans-serif;
+}
+.userName{
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  background: #a32725;
+}
+.r:hover{
+  background: #a32725;
+  color: white !important;
+}
+@media(max-width: 767px){
+  .nav-link{
+    /* text-align: center; */
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+

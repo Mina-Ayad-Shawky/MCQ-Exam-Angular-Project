@@ -1,0 +1,282 @@
+.mt-5 {
+  text-align: right;
+}
+
+.startBtn {
+  background: #e53935;
+  color: white;
+}
+
+
+::ng-deep .mat-step-icon {
+  background-color: #e53935 !important;
+  /* Change this to your desired color */
+  color: #ffffff !important;
+  /* Icon color */
+}
+
+.hero {
+  flex-wrap: wrap;
+}
+::ng-deep .mat-radio-label-content {
+  width: 100% !important;
+}
+::ng-deep .sss{
+  width: 100% !important;
+}
+
+
+::ng-deep mat-card {
+  position: relative;
+  padding-top: 20px; /* space for the title */
+}
+
+.title-container {
+  position: absolute;
+  top: -20px; /* overlap position */
+  left: 50%;
+  transform: translateX(-50%);
+  background: white; /* Matches card background */
+  padding: 10px 30px; /* space around title */
+  font-size: larger;
+  font-weight: bolder;
+}
+
+
+
+
+
+
+
+
+
+
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+
+
+
+    /*==========  Mobile First Method  ==========*/
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+        
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }
+
+
+
+    /*==========  Non-Mobile First Method  ==========*/
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+        
+    }
+    
+    
+    
+/*=====================================================
+=            Bootstrap 2.3.2 Media Queries            =
+=====================================================*/
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 979px) {
+
+}
+
+@media only screen and (max-width : 767px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 320px) {
+
+}
+
+
+    /* default styles here for older browsers. 
+       I tend to go for a 600px - 960px width max but using percentages
+    */
+    @media only screen and (min-width:960px){
+        /* styles for browsers larger than 960px; */
+    }
+    @media only screen and (min-width:1440px){
+        /* styles for browsers larger than 1440px; */
+    }
+    @media only screen and (min-width:2000px){
+        /* for sumo sized (mac) screens */
+    }
+    @media only screen and (max-device-width:480px){
+       /* styles for mobile browsers smaller than 480px; (iPhone) */
+    }
+    @media only screen and (device-width:768px){
+       /* default iPad screens */
+    }
+    /* different techniques for iPad screening */
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+      /* For portrait layouts only */
+    }
+
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+      /* For landscape layouts only */
+    }
+
+  /*******Nuevos mensajes de error******/
+  
+.new-message-box {
+    margin: 15px 0;
+    padding-left: 20px;
+    margin-bottom: 25px!important;
+}
+
+.new-message-box p{
+    font-size: 1.15em;
+    font-weight: 600;
+}
+
+.info-tab {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    position: relative;
+    top: 8px;
+}
+
+.info-tab {
+    float: left;
+    margin-left: -23px;
+}
+
+.info-tab i::before {
+    width: 24px;
+    height: 24px;
+    box-shadow: inset 12px 0 13px rgba(0,0,0,0.5);
+}
+
+.info-tab i::after {
+    width: 0;
+    height: 0;
+    border: 12px solid transparent;
+    /* border-bottom-color: #fff;  */
+    /* border-left-color: #fff; */
+    bottom: -18px;
+}
+
+.info-tab i::before, .info-tab i::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: -17px;
+    transform: rotateX(60deg);
+}
+
+.note-box, .warning-box, .tip-box-success, .tip-box-danger, .tip-box-warning, .tip-box-info, .tip-box-alert {
+    padding: 12px 8px 3px 26px;
+}
+
+.new-message-box-alert {
+    background: #FF6F00;
+    padding: 3px;
+    margin: 10px 0;
+}
+
+.tip-box-alert {
+    color: #212121;
+    background: #FFF8E1;
+}
+
+.tip-icon-alert {
+    background: #FF6F00;
+}
+
+
+
+.tip-icon-alert i::before {
+    background: #FF6F00;
+}
+@media(max-width:750px){
+  .mat-form-field{
+    width: 100% !important;
+  }
+  .mat-radio-group{
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    flex-direction: column !important;
+  }
+  .ss{
+    width: 100% !important;
+  }
+  .btns{
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    flex-direction: column-reverse;
+  }
+  .sub{
+    margin-bottom: 15px;
+  }
+  ::ng-deep .mat-vertical-content-container{
+    margin-right: 0px !important;
+  }
+ /* ::ng-deep .mat-vertical-content{
+    padding: 0px !important;
+  } */
+  .title-container{
+    width: 80%;
+    text-align: center;
+  }
+  .mat-card-title{
+    font-size: 17px !important;
+    line-height: 20px !important;
+  } 
+  .sm{
+    padding: 0px !important;
+    width: 100% !important;
+  }
+}
